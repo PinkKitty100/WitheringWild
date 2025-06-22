@@ -1,11 +1,13 @@
 package witheringwild;
 
 import arc.assets.Loadable;
+import mindustry.mod.Mod;
 import witheringwild.content.*;
 
-public class WWMod implements Loadable{
+public class WWMod extends Mod {
 
-    public static void loadContent() {
+    @Override
+    public void loadContent() {
         WWPlanets.load();
     }
 }

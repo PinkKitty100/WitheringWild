@@ -4,5 +4,7 @@
     "author": "PinkKitty100",
     "description": "There is almost no content so far, you've been warned ! \n But it would add a whole new planet with its very own tech tree !",
     "version": "-1",
-    "minGameVersion": "149"
+    "minGameVersion": "149",
+    "main": "witheringwild.WWMod",
+    "java": true
 }

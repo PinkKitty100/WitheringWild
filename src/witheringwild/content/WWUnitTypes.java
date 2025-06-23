@@ -35,7 +35,7 @@ public class WWUnitTypes {
             strafePenalty = 0.9f;
 
             mineTier = 1; // Maybe more ? Depends on what ores will be added.
-            mineSpeed = 1f; // I know this is the default value, but it serves as an indication.
+            mineSpeed = 1.5f;
             buildSpeed = 0.75f;
             payloadCapacity = 0;
             fogRadius = 0;

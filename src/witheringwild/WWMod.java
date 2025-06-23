@@ -14,5 +14,7 @@ public class WWMod extends Mod {
         WWItems.load();
         WWUnitTypes.load();
         WWBlocks.load();
+
+        WWTechTree.load();
     }
 }

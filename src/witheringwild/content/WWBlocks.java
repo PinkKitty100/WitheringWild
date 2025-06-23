@@ -93,6 +93,7 @@ public class WWBlocks {
             tier = 1;
             drillTime = 250;
             size = 1;
+            researchCostMultiplier = 0.05f;
           
             consumeLiquid(Liquids.water, 0.5f / 60f).boost();
         }};

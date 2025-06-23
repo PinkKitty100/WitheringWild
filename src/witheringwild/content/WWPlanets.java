@@ -1,6 +1,5 @@
 package witheringwild.content;
 
-import mindustry.content.Blocks;
 import mindustry.game.Team;
 import mindustry.type.Planet;
 import mindustry.maps.planet.SerpuloPlanetGenerator;
@@ -51,7 +50,7 @@ public class WWPlanets {
             );
             startSector = 14;
             orbitSpacing = 1;
-            defaultCore = Blocks.coreShard;
+            defaultCore = WWBlocks.coreFirst;
             allowLaunchLoadout = false;
             clearSectorOnLose = true;
             allowLaunchToNumbered = false;

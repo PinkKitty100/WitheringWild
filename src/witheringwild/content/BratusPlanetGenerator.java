@@ -31,8 +31,9 @@ public class BratusPlanetGenerator extends PlanetGenerator {
     }
 
     @Override
-    public Color getColor(Vec3 pos) {
-        return getBlock(pos).mapColor;
+    public void getColor(Vec3 pos, Color out) {
+        Block block = getBlock(pos);
+        out.set(block.mapColor).a(block.albedo);
     }
 
     public Block getBlock(Vec3 pos) {

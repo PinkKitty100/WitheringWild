@@ -45,7 +45,7 @@ public class WWPlanets {
             );
             startSector = 14;
             orbitSpacing = 1;
-            defaultCore = WWBlocks.coreFirst;
+            defaultCore = WWBlocks.coreRoot;
             allowLaunchLoadout = false;
             clearSectorOnLose = true;
             allowLaunchToNumbered = false;

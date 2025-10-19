@@ -28,7 +28,7 @@ public class WWTechTree {
         for(var item : content.items()) costMultipliers.put(item, 0.9f);
         costMultipliers.put(Items.sand, 1.1f);
 
-        WWPlanets.bratus.techTree = nodeRoot("Bratus", WWBlocks.coreFirst, () -> {
+        WWPlanets.bratus.techTree = nodeRoot("Bratus", WWBlocks.coreRoot, () -> {
             context().researchCostMultipliers = costMultipliers;
 
             // Items

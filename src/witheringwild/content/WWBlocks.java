@@ -44,7 +44,7 @@ public class WWBlocks {
 
     // storage
 
-    coreFirst
+    coreRoot,
 
     // turrets
 
@@ -98,9 +98,8 @@ public class WWBlocks {
             consumeLiquid(Liquids.water, 0.5f / 60f).boost();
         }};
 
-        coreFirst = new CoreBlock("core-first") {{
-            requirements(Category.effect, with());
-            alwaysUnlocked = true;
+        coreRoot = new CoreBlock("core-root") {{
+            requirements(Category.effect, with(), true);
             isFirstTier = true;
 
             size = 1;

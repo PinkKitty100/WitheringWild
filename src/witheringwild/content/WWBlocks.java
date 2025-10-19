@@ -1,14 +1,18 @@
 package witheringwild.content;
 
+import witheringwild.world.blocks.production.*;
+import witheringwild.world.draw.*;
+
+import mindustry.content.*;
+import mindustry.entities.bullet.*;
+import mindustry.entities.pattern.*;
+import mindustry.graphics.*;
+import mindustry.type.*;
 import mindustry.world.*;
 import mindustry.world.draw.*;
 import mindustry.world.blocks.environment.*;
 import mindustry.world.blocks.production.*;
 import mindustry.world.blocks.storage.*;
-
-import mindustry.content.*;
-
-import mindustry.type.*;
 
 import static mindustry.type.ItemStack.*;
 
@@ -40,7 +44,7 @@ public class WWBlocks {
 
     // production
 
-    grassCutter, harvester,
+    grassCutter, harvester, treeCutter,
 
     // storage
 
@@ -60,10 +64,19 @@ public class WWBlocks {
     ;
 
     public static void load() {
+        
         Blocks.grass.attributes.set(WWAttributes.organicProduction, 1);
         Blocks.sand.playerUnmineable = false;
 
-        tree = new TreeBlock("tree");
+        tree = new ResourceCreator("tree") {{
+            requirements(Category.production, with(WWItems.wood, 25));
+            outputItem = new ItemStack(WWItems.wood, 2);
+            craftTime = 8*60f;
+            itemCapacity = 2;
+            hasItems = true;
+            hasLiquids = hasPower = false;
+            drawer = new DrawTree();
+        }};
 
         grassCutter = new AttributeCrafter("grass-cutter") {{
             requirements(Category.production, with(Items.sand, 10));
@@ -96,6 +109,16 @@ public class WWBlocks {
             researchCostMultiplier = 0.05f;
           
             consumeLiquid(Liquids.water, 0.5f / 60f).boost();
+        }};
+ 
+        treeCutter = new ResourceCatalyst("tree-cutter") {{
+            requirements(Category.production, with(Items.sand, 50, WWItems.weed, 10));
+            size = 2;
+            range = 30;
+
+            condition = (b -> {
+                return b.block.name.endsWith("tree");
+            });
         }};
 
         coreRoot = new CoreBlock("core-root") {{

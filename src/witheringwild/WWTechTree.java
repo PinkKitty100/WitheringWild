@@ -33,12 +33,18 @@ public class WWTechTree {
 
             // Items
             nodeProduce(Items.sand, () -> {
-                nodeProduce(weed, () -> {});
+                nodeProduce(weed, () -> {
+                    nodeProduce(wood, () -> {});
+                });
             });
 
             // Production
             node(grassCutter, ItemStack.with(Items.sand, 10), () -> { // Override Research cost because else it's too low
-                node(harvester);
+                node(harvester, () -> {
+                    node(treeCutter, () -> {
+                        node(WWBlocks.tree);
+                    });
+                });
             });
 
             // Sectors

@@ -25,8 +25,8 @@ public class WWPlanets {
                 Color.valueOf("ffeb7f")
             );
             cloudMeshLoader = () -> new MultiMesh(
-                new HexSkyMesh(this, "CloudLumen1".hashCode(), 0.13f, 0.15f, 6, Color.valueOf("51432a").a(0.85f), 2, 0.25f, 2f, 0.51f),
-                new HexSkyMesh(this, "CloudLumen2".hashCode(), 0.21f, 0.25f, 8, Color.valueOf("dac296").a(0.7f), 3, 0.3f, 0.8f, 0.1f)
+                new HexSkyMesh(this, "CloudLumen1".hashCode(), 0.13f, 0.15f, 6, Color.valueOf("51432a").a(0.25f), 2, 0.25f, 2f, 0.51f),
+                new HexSkyMesh(this, "CloudLumen2".hashCode(), 0.21f, 0.25f, 8, Color.valueOf("dac296").a(0.5f), 3, 0.3f, 0.8f, 0.1f)
             );
         }};
 

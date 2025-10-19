@@ -1,10 +1,10 @@
 {
-    "name": "withering-wild",
-    "displayName": "Withering Wild",
-    "author": "PinkKitty100",
-    "description": "There is almost no content so far, you've been warned ! \n But it would add a whole new planet with its very own tech tree !",
-    "version": "-1",
-    "minGameVersion": "149",
-    "main": "witheringwild.WWMod",
-    "java": true
+    name: withering-wild,
+    displayName: "[#65A95E]W[#5C9656]it[#52844E]h[#497145]e[#405F3D]r[#364C35]in[#2D3A2D]g[#242724] W[#1A151C]il[#110214]d",
+    author: PinkKitty100,
+    description: There is almost no content so far, you've been warned ! \n But it would add a whole new planet with its very own tech tree !,
+    version: -1,
+    minGameVersion: 149,
+    main: witheringwild.WWMod,
+    java: true
 }
